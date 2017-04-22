@@ -112,13 +112,16 @@ class User extends CI_Controller {
 
 		$delet = $this->M_User->delete($id);
 
-		if($delet){
+		
+
 
 			$this->session->set_flashdata('message', 'Your data has been deleted');
 
-			
-		}
+			redirect($this->index());
 
-		redirect($this->index());
+			
+		
+
+		
 	}
 }
